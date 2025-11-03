@@ -47,4 +47,4 @@ local_settings.py
 # Node / frontend (if you use React, etc.)
 node_modules/
 build/
-dist/
+# dist/
