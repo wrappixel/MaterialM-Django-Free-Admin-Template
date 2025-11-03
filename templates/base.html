@@ -1,0 +1,55 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Website{% endblock %}</title>
+    {% block vendor_css %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/logos/favicon.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.min.css' %}" />
+    {% endblock vendor_css %}
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+
+<body>
+    <!--Vendors Javascript-->
+    {% block vendor_js %}
+
+
+    <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/sidebarmenu.js' %}"></script>
+    <script src="{% static 'js/app.min.js' %}"></script>
+    <script src="{% static 'libs/apexcharts/dist/apexcharts.min.js' %}"></script>
+    <script src="{% static 'libs/simplebar/dist/simplebar.js' %}"></script>
+
+    <!-- CDN scripts can stay as-is -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
+    {% endblock vendor_js %}
+
+    <!--Page Javascript-->
+    {% block page_js %} {% endblock page_js %}
+
+    <!-- Navbar -->
+    {% include "partials/navbar.html" %}
+
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed">
+        <!-- Sidebar -->
+        {% include "partials/sidebar.html" %}
+
+        <!-- Main Content -->
+        <main id="content">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <!-- {% include "partials/footer.html" %} -->
+
+</body>
+
+</html>

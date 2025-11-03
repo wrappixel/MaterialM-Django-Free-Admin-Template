@@ -1,0 +1,30 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Website{% endblock %}</title>
+</head>
+{% block vendor_css %}
+<link rel="shortcut icon" type="image/png" href="{% static 'images/logos/favicon.png' %}" />
+<link rel="stylesheet" href="{% static 'css/styles.min.css' %}" />
+{% endblock vendor_css %}
+<body>
+
+   
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+        
+
+        <!-- Main Content -->
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <!-- Footer -->
+    {% include "partials/footer.html" %}
+
+</body>
+</html>
