@@ -63,6 +63,76 @@ With Django’s robust architecture and Bootstrap’s flexibility, MaterialM ens
 
 ---
 
+## ⚙️ Prerequisites
+
+> **Info:** This page includes the prerequisites installation steps also.
+
+Before starting, make sure your system has the following tools installed:
+
+### 🧩 Required Technologies
+- **Python 3.10+**
+- **Django 5.0+**
+- **Git**
+
+### 🧰 Frontend Build Tools (for asset compilation)
+- **Node.js (LTS)**
+- **Gulp**
+- **Yarn**
+
+---
+
+## 🐍 Install Python
+
+Python is the programming language that Django is built with. Django is a Python web framework.
+
+> **Info:** macOS and most Linux distributions come with Python pre-installed.
+
+To check if Python is already installed, run:
+```bash
+python --version
+```
+
+### For Windows & macOS:
+
+Download Python for your OS from the official website: [Python Download](https://python.org/downloads)
+
+Run the installer and make sure to check the box that says “✅ Add Python to PATH” before clicking Install Now.
+
+Verify the installation:
+```bash
+python --version
+```
+### For Linux (Ubuntu/Debian):
+
+Run the following commands:
+```bash
+sudo apt-get update
+sudo apt-get install python3
+```
+
+### Install PIP
+
+> Info: PIP is automatically installed with Python 2.7.9+ and Python 3.4+.
+
+To check if PIP is already installed:
+```bash
+pip --version
+```
+
+If not installed, follow these steps:
+
+#### - Installing Pip using get-pip.py
+
+1. Download the script from: https://bootstrap.pypa.io/get-pip.py
+2. Open terminal/command prompt and navigate to the folder containing get-pip.py.
+
+Run:
+
+```bash
+python get-pip.py
+```
+
+---
 ## 💾 Installation Guide
 
 Welcome to the **MaterialM Free Django Admin Template**! Follow these steps to set up your local development environment.
