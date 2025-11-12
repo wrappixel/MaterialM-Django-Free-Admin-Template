@@ -32,6 +32,7 @@ def no_params():
 handler404 = 'app.dashboards.views.custom_404'
 urlpatterns = [
     # Dashboards
+    path('admin/', admin.site.urls),
     distill_path('', dash_views.index, name='index', distill_func=no_params),
     distill_path('ui-buttons/', ui_views.uibutton, name='ui-buttons', distill_func=no_params),
     distill_path('ui-card/', ui_views.uicard, name='ui-card', distill_func=no_params),
